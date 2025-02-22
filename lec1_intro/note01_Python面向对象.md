@@ -1,6 +1,6 @@
 # Python 面向对象编程
 
-教材：[数据结构与算法 Python 实现](https://item.jd.com/12425597.html)
+教材：[《数据结构与算法 Python 实现》](https://book.douban.com/subject/30323938/)
 
 ## 1 类定义
 
