@@ -11,6 +11,9 @@ Tags: `Python` `Data Structure` `Algorithms`
 1. Python 基础：面向对象程序设计 
    - 笔记见 [Python 基础：面向对象程序设计](./lec1_intro/note01_Python面向对象.md) 
    - 所有相关材料均在文件夹 [lec1](./lec1_intro)
+2. 算法分析：计算原子与时间复杂度
+   - 笔记见 [算法分析：计算原子与时间复杂度](./lec2_algo_analysis/note02_算法分析.md)
+   - 所有相关材料均在文件夹 [lec2](./lec2_algo_analysis)
 
 
 ## 友链
