@@ -111,7 +111,7 @@ draw_ruler(len_of_ruler=1, num_scale=3)
 
 - 细节 & 原理
 
-![](https://blog-iskage.oss-cn-hangzhou.aliyuncs.com/images/QQ_1740819894170.png)
+![](https://blog-iskage.oss-cn-hangzhou.aliyuncs.com/images/QQ_1740900901780.png)
 
 每一个 `draw_interval(n)` 下都嵌套着一个结构为
 
