@@ -14,6 +14,9 @@ Tags: `Python` `Data Structure` `Algorithms`
 2. 算法分析：计算原子与时间复杂度
    - 笔记见 [算法分析：计算原子与时间复杂度](./lec2_algo_analysis/note02_算法分析.md)
    - 所有相关材料均在文件夹 [lec2](./lec2_algo_analysis)
+3. 递归算法
+   - 笔记见 [递归算法](./lec3_recursion/note03_递归.md)
+   - 所以相关材料均在文件夹 [lec3](./lec3_recursion)
 
 
 ## 友链
