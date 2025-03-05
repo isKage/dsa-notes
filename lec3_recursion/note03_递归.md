@@ -594,21 +594,25 @@ sys.setrecursionlimit(1000000)
 
 - 尾递归必定是一个线性递归
 
-例如：阶乘函数
+例如：二分查找
 
 ```python
-def factorial(n):
-    if n == 0:
-        return 1
-    else:
-        return n * factorial(n - 1)  # 递归调用 factorial() 为算法的输出被 return
+def binary_search(data, target, left, right):
+    while left <= right:
+        # 利用循环从左右向中间查找
+        mid = (left + right) // 2
+        if target == data[mid]:
+            return True
+        elif target < data[mid]:
+            right = mid - 1
+        else:
+            left = mid + 1
+    return False
 ```
 
-### 4.2 尾递归的非递归算法
+### 4.2 非递归算法
 
-**任何的尾递归均可转写为一个非递归算法**
-
-#### 4.2.1 阶乘函数（非递归）
+#### 4.2.1 阶乘函数（非递归）非尾递归
 
 ```python
 def factorial(n):
