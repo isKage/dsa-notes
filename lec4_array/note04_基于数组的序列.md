@@ -1,8 +1,8 @@
-# 基于数组的序列
+# 基于数组的序列：Python 动态数组原理与插入排序
 
 教材：[《数据结构与算法 Python 实现》](https://book.douban.com/subject/30323938/)
 
-本文介绍了底层次数组的原理，并自定义实现了 Python 的一个动态数组。并详细分析了底层存储原理、摊销时间。分析了一些基于数组的案例，例如插入排序算法。
+本文介绍了底层次数组的原理，并自定义实现了 Python 的一个动态数组。并详细分析了底层存储原理、摊销时间。分析了一些基于数组的案例，例如插入排序算法。同时指出了组成字符串和多维数组创建的常见误用。
 
 ## 1 Python 序列类型
 
@@ -410,11 +410,161 @@ print("使用临时表消耗的时间: {}".format(end - start))
 
 
 
+## 6 插入排序算法
+
+从第 2 个元素开始，比较它和之前的元素大小，如果它比前一个元素小，则接着往前比较，直到前一个元素小于它，则插入到这个元素的后面。（从小到大）
+
+![插入排序示意图](https://blog-iskage.oss-cn-hangzhou.aliyuncs.com/images/QQ_1741256265390.png)
+
+### 6.1 代码实现
+
+```python
+def insertion_sort(arr):
+    """
+    从小到大排序数组
+    :param arr: 数组
+    :return: None
+    """
+    for i in range(1, len(arr)):
+        # 从第 2 个元素开始
+        current = arr[i]
+        j = i
+
+        while j > 0 and current < arr[j - 1]:
+            # 当前一个元素不是第 0 个元素且比 current 大时
+            arr[j] = arr[j - 1]  # 后移
+            j -= 1  # 继续向前找
+
+        # 插入
+        arr[j] = current
+```
+
+### 6.2 算法分析
+
+下面考虑的为从小到大排序
+
+- 最好的情况：已经是从小到大排序
+
+此时只需要遍历第 2 个元素到最后一个元素即可，因为每次比较都发现比前一个元素大，没有插入操作。故复杂度为 $$O(n)$$ 。
+
+- 最坏的情况：数组为从大到小排序
+
+此时对第 i 个元素而言，都要插入到最前，前面的 i - 1 个元素均要后移一位，需要操作 `i-1 + 1` （后移 i - 1 次，插入 1 次）。故对于从第 2 个元素开始遍历，需要次数 $$\sum\limits_{i=2}^n\ (i-1+1)\sim n^2$$ ，故复杂度为 $$O(n^2)$$ 。
+
+所以，综合以上分析，插入排序的时间复杂度为 $$O(n^2)$$ 。
+
+> 【注意】插入排序最坏情况才是 $$O(n^2)$$ ，而对于一些运气较好时，插入排序非常高效，可以对比选择排序。
+
+### 6.3 与选择排序对比
+
+每次从未排序的部分中选择最小的元素，将其放到前面已排序部分的末尾。（从小到大）
+
+![选择排序示意图](https://blog-iskage.oss-cn-hangzhou.aliyuncs.com/images/selection_sort.jpeg)
+
+- 选择排序的代码实现
+
+```python
+def selection_sort(arr):
+    """
+    选择排序：从小到大排序数组
+    :param arr: 数组
+    :return: None
+    """
+    for i in range(len(arr)):
+        # 从起始开始遍历
+        min_index = i
+        for j in range(i + 1, len(arr)):
+            if arr[j] < arr[min_index]:
+                min_index = j  # 找到后面最小的元素
+        
+        # 将后面最小的元素放到前面子列的末尾
+        arr[i], arr[min_index] = arr[min_index], arr[i]
+```
+
+- 选择排序的算法分析
+
+无论最好还是最坏（即无轮是从小到大还是从大到小排序的原数组），对于第 i + 1 个位置，选择排序都需要找到 i + 1 到 n 的最小元素，然后插入到第 i 个位置后。即使是从小到大排序好的原数组，都需要遍历以确定是否是最小元素。故复杂度为 $$\sum\limits_{i=1}^n\ (n - i) \sim n^2$$ 即一定为 $$O(n^2)$$ 。
+
+所以，【选择排序不如插入排序高效】。也可以通过下面的例子验证。
+
+```python
+x = [i for i in range(10000)]
+start = time.time()
+insertion_sort(x)
+end = time.time()
+print("insertion sort cost {}s".format(end - start))
+
+x = [i for i in range(10000)]
+start = time.time()
+selection_sort(x)
+end = time.time()
+print("selection sort cost {}s".format(end - start))
+
+"""
+insertion sort cost 0.0012428760528564453s
+selection sort cost 2.98787522315979s
+"""
+```
+
+当遇见最好情况时，插入排序大约消耗了 0.0012 秒，而选择排序则消耗了 2.99 秒，是前者的 2492 倍！
 
 
 
+## 7 多维数组的误用
 
+### 7.1 误用
 
+以创建二维数组（矩阵）为例，如果采用如下方式构建数组：【误用】
+
+```python
+data = [[0] * n] * m
+```
+
+可以初始化一个列表，例如 `m = 3, n = 6`
+
+```python
+m = 3
+n = 6
+data = [[0] * n] * m
+
+# data = 
+# [[0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]
+```
+
+但是此时 data 的第一维度的索引指向的是同一个列表对象，如图：
+
+<img src="https://blog-iskage.oss-cn-hangzhou.aliyuncs.com/images/QQ_1741262575523.png" alt="误用：指向同一列表对象" style="zoom:50%;" />
+
+此时，如果改变 `data[0][0]` 的值，对应的 `data[1][0]` 和 `data[2][0]` 的值会一起变化（因为他们指向同一个列表对象，需要注意，被指向的列表对象 `[0, 0, 0, 0, 0, 0]` 这 6 个元素存储的是常数 `0` 的地址）。
+
+```python
+data[0][0] = 1
+print(data)
+
+# data = 
+# [[1, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0]]
+```
+
+### 7.2 正确使用
+
+正确的创建方式：使用 Python 的列表推导式实例化新的列表对象
+
+```python
+data = [[0] * n for _ in range(m)]
+```
+
+![正确使用](https://blog-iskage.oss-cn-hangzhou.aliyuncs.com/images/QQ_1741262889863.png)
+
+```python
+m = 3
+n = 6
+data = [[0] * n for _ in range(m)]
+data[0][0] = 1
+print(data)
+
+# data = 
+# [[1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]
+```
 
 
 

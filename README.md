@@ -1,4 +1,5 @@
 # 数据结构与算法: 基于 Python
+
 > Data Structure and Algorithms in Python
 
 Tags: `Python` `Data Structure` `Algorithms`
@@ -16,7 +17,10 @@ Tags: `Python` `Data Structure` `Algorithms`
    - 所有相关材料均在文件夹 [lec2](./lec2_algo_analysis)
 3. 递归算法
    - 笔记见 [递归算法](./lec3_recursion/note03_递归.md)
-   - 所以相关材料均在文件夹 [lec3](./lec3_recursion)
+   - 所有相关材料均在文件夹 [lec3](./lec3_recursion)
+4. 数组
+   - 笔记见 [基于数组的序列](./lec4_array/note04_基于数组的序列.md)
+   - 所有相关材料均在文件夹 [lec4](./lec4_array)
 
 
 ## 友链
