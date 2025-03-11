@@ -21,7 +21,10 @@ Tags: `Python` `Data Structure` `Algorithms`
 4. 数组
    - 笔记见 [基于数组的序列](./lec4_array/note04_基于数组的序列.md)
    - 所有相关材料均在文件夹 [lec4](./lec4_array)
-
+5. 链表
+   - 第一部分笔记见 [链表 1 单向链表、循环链表和双向链表](./lec5_linked_list/note05_链表1.md)
+   - 笔记见 [链表 2](./lec5_linked_list/)
+   - 所有相关材料均在文件夹 [lec5](./lec5_linked_list)
 
 ## 友链
 
