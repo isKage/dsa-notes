@@ -23,7 +23,7 @@ Tags: `Python` `Data Structure` `Algorithms`
    - 所有相关材料均在文件夹 [lec4](./lec4_array)
 5. 链表
    - 第一部分笔记见 [链表 1 单向链表、循环链表和双向链表](./lec5_linked_list/note05_链表1.md)
-   - 笔记见 [链表 2](./lec5_linked_list/)
+   - 第二部分笔记见 [链表 2 链表位置信息、链表的插入排序和 More-To-Front 启发式算法](./lec5_linked_list/note05_链表2.md)
    - 所有相关材料均在文件夹 [lec5](./lec5_linked_list)
 
 ## 友链
