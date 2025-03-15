@@ -25,6 +25,10 @@ Tags: `Python` `Data Structure` `Algorithms`
    - 第一部分笔记见 [链表 1 单向链表、循环链表和双向链表](./lec5_linked_list/note05_链表1.md)
    - 第二部分笔记见 [链表 2 链表位置信息、链表的插入排序和 More-To-Front 启发式算法](./lec5_linked_list/note05_链表2.md)
    - 所有相关材料均在文件夹 [lec5](./lec5_linked_list)
+6. 栈和队列
+   - 第一部分笔记见 [栈 与 回溯算法](./lec6_stack_queue/note06_栈.md)
+   - 第二部分见
+   - 所有相关材料均在文件夹 [lec6](./lec6_stack_queue)
 
 ## 友链
 
