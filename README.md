@@ -30,6 +30,11 @@ Tags: `Python` `Data Structure` `Algorithms`
    - 第二部分见
    - 所有相关材料均在文件夹 [lec6](./lec6_stack_queue)
 
+## 习题
+习题文件夹为 [Assignments](./Assignments)
+
+1. 第一次习题：有关 `introduction`, `alorithm`, `recursion`, `array`, `linked list` and `stack` 见 [HW1](./Assignments/HW1)
+
 ## 友链
 
 1. isKage 的知乎主页 [Zhihu](https://www.zhihu.com/people/iskage)
