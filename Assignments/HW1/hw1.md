@@ -118,7 +118,7 @@ if __name__ == '__main__':
 
 结果图示为
 
-![hw1_3](https://blog-iskage.oss-cn-hangzhou.aliyuncs.com/images/hw1_3.png)
+![hw1_3](./hw1_3.png)
 
 
 
