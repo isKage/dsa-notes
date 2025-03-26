@@ -44,6 +44,12 @@ Tags: `Python` `Data Structure` `Algorithms`
 
 1. 第一次习题：有关 `introduction`, `alorithm`, `recursion`, `array`, `linked list` and `stack` 见 [HW1](./Assignments/HW1)
 
+
+## LeetCode 算法题
+补充题文件夹为 [LeetCode](./LeetCode)
+
+1. 链表相关 [Linked-List](./LeetCode/Linked-List)
+
 ## 友链
 
 1. isKage 的知乎主页 [Zhihu](https://www.zhihu.com/people/iskage)
