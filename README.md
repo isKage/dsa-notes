@@ -38,6 +38,10 @@ Tags: `Python` `Data Structure` `Algorithms`
    - 第一部分笔记见 [栈 与 回溯算法 (深度优先)](./lec6_stack_queue/note06_栈.md)
    - 第二部分笔记见 [队列 与 洪水算法 (广度优先)](./lec6_stack_queue/note06_队列.md)
    - 所有相关材料均在文件夹 [lec6](./lec6_stack_queue)
+7. 树
+   - 第一部分笔记见 [树与二叉树](./lec7_tree/note07_树与二叉树.md)
+   - 第二部分笔记见 [树的遍历算法与实际应用]
+   - 所有相关材料均在文件夹 [lec7](./lec7_tree)
 
 ## 习题
 习题文件夹为 [Assignments](./Assignments)
