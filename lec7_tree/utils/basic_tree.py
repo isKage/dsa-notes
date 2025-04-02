@@ -1,3 +1,9 @@
+try:
+    from .linked_queue import LinkedQueue
+except ImportError:
+    from linked_queue import LinkedQueue
+
+
 class Tree:
     """树的抽象基础类，基础方法需要子类定义"""
 
@@ -72,8 +78,47 @@ class Tree:
             # 当前节点的高度 = 所有子节点高度最大值 + 1
             return 1 + max(self.height(c) for c in self.children(p))
 
+    # ---------------- 深度优先：前/后序遍历 ----------------
+    def __iter__(self):
+        """定义迭代器：遍历方式可选"""
+        for p in self.positions():  # positions() 可选不同的遍历方式
+            yield p.element()
+
+    def positions(self):
+        """由子类具体指定 positions 方法"""
+        raise NotImplementedError('must be implemented by subclass')
+
+    def preorder(self):
+        """前序遍历"""
+        raise NotImplementedError('must be implemented by subclass')
+
+    def _subtree_preorder(self, p):
+        """前序遍历子树"""
+        raise NotImplementedError('must be implemented by subclass')
+
+    def postorder(self):
+        """后序遍历"""
+        raise NotImplementedError('must be implemented by subclass')
+
+    def _subtree_postorder(self, p):
+        """后序遍历子树"""
+        raise NotImplementedError('must be implemented by subclass')
+
+    # ---------------- 广度优先：层序遍历 ----------------
+    def breadthfirst(self):
+        """广度优先：层序遍历"""
+        if not self.is_empty():
+            fringe = LinkedQueue()  # 队列实现
+            fringe.enqueue(self.root())  # 根节点入队
+
+            while not fringe.is_empty():
+                p = fringe.dequeue()  # 取出头部
+                yield p  # 生成
+
+                for c in self.children(p):  # 将子节点入队
+                    fringe.enqueue(c)
+
 
 if __name__ == '__main__':
     # 仅仅检查是否能运行，虽然实例化没有意义
     t = Tree()
-

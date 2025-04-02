@@ -37,6 +37,24 @@ class BinaryTree(Tree):
         if self.right(p) is not None:
             yield self.right(p)
 
+    # ---------------- 深度优先：二叉树的中序遍历 ----------------
+    def __iter__(self):
+        """定义迭代器：遍历方式可选"""
+        for p in self.positions():  # positions() 可选不同的遍历方式
+            yield p.element()
+
+    def positions(self):
+        """由子类具体指定 positions 方法"""
+        raise NotImplementedError('must be implemented by subclass')
+
+    def inorder(self):
+        """中序遍历"""
+        raise NotImplementedError('must be implemented by subclass')
+
+    def _subtree_inorder(self, p):
+        """中序遍历子树"""
+        raise NotImplementedError('must be implemented by subclass')
+
 
 if __name__ == '__main__':
     # 仅仅检查是否能运行，虽然实例化没有意义
