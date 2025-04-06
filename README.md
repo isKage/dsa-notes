@@ -42,6 +42,9 @@ Tags: `Python` `Data Structure` `Algorithms`
    - 第一部分笔记见 [树与二叉树](./lec7_tree/note07_树与二叉树.md)
    - 第二部分笔记见 [树的遍历算法与实际应用](./lec7_tree/note07_树的遍历算法.md)
    - 所有相关材料均在文件夹 [lec7](./lec7_tree)
+8. 优先级队列和堆
+   - 笔记见 [优先级队列 堆 堆排序](./lec8_priority_queue_heap/note08_优先级队列和堆.md)
+   - 所有相关材料均在文件夹 [lec8](./lec8_priority_queue_heap)
 
 ## 习题
 习题文件夹为 [Assignments](./Assignments)
@@ -60,3 +63,5 @@ Tags: `Python` `Data Structure` `Algorithms`
 2. isKage 的个人博客 [isKage\`Blog](https://blog.iskage.online/)
 3. 其他各类笔记/资料整理 [Notes Navigation](https://zhuanlan.zhihu.com/p/24863956479)
 
+## Stargazers over time
+[![Stargazers over time](https://starchart.cc/isKage/dsa-notes.svg?variant=adaptive)](https://starchart.cc/isKage/dsa-notes)
