@@ -1,3 +1,8 @@
+"""
+类 `HeapPriorityQueue` 中 `_upheap` 和 `_downheap` 方法的非递归实现
+"""
+
+
 class Empty(Exception):
     """自定义异常类 Empty"""
     pass
@@ -58,29 +63,40 @@ class HeapPriorityQueue(PriorityQueueBase):
         """交换 i j 位置上的元素 <=> 冒泡"""
         self._data[i], self._data[j] = self._data[j], self._data[i]
 
+    # ==================== 覆写 _upheap 方法 ====================
     def _upheap(self, j):
         """向上冒泡"""
+        cur = j
         parent = self._parent(j)  # j 的父节点
-        if j > 0 and self._data[j] < self._data[parent]:  # 非根节点/不满足 Heap-Order
-            self._swap(j, parent)  # 冒泡/交换
-            self._upheap(parent)  # 递归实现，向上 (parent) 冒泡
+        while cur > 0 and self._data[cur] < self._data[parent]:  # 非根节点/不满足 Heap-Order
+            self._swap(cur, parent)  # 冒泡/交换
 
+            cur = parent  # go ahead -> cur 变为父节点
+            parent = self._parent(cur)  # 同理，继续向上冒泡
+
+    # =================== 覆写 _downheap 方法 ===================
     def _downheap(self, j):
         """向下冒泡"""
+        cur = j
         # 找到最小的子节点 small_child
-        if self._has_left(j):  # 左/非叶节点
-            left = self._left(j)
+        while self._has_left(cur):  # 直到叶子节点 (完全二叉树，没有 left 就一定没有 right)
+            left = self._left(cur)  # 左/非叶节点
             small_child = left
 
-            if self._has_right(j):  # 右/非叶节点
-                right = self._right(j)
+            if self._has_right(cur):  # 右/非叶节点
+                right = self._right(cur)
                 if self._data[right] < self._data[left]:
                     small_child = right
 
             # 不满足 Heap-Order
-            if self._data[small_child] < self._data[j]:
-                self._swap(small_child, j)  # 冒泡/交换
-                self._downheap(small_child)  # 递归实现，向下 (small_child) 冒泡
+            if self._data[small_child] < self._data[cur]:
+                self._swap(small_child, cur)  # 冒泡/交换
+
+                cur = small_child  # 向下走一步
+            else:  # 满足 Heap-Order 提前结束
+                break
+
+    # ==========================================================
 
     # ---------- 公有方法：堆结构 ----------
     def __init__(self, contents=()):
@@ -139,7 +155,7 @@ if __name__ == '__main__':
     print("Now, the min is:", hpq.min())
 
     print("=" * 15, "Heap Priority Queue by Array", "=" * 15)
-    l = [(1, 'small'), (2, 'median'), (3, 'large')]
+    l = [(1, 'small'), (3, 'median'), (5, 'large')]
     hpq = HeapPriorityQueue(l)
     print("The min is:", hpq.min())
     print("Delete the min:", hpq.remove_min())

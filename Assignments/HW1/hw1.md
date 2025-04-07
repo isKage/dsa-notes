@@ -2,7 +2,14 @@
 
 > about `introduction`, `alorithm`, `recursion`, `array`, `linked list` and `stack`
 
+## Question 1
+
+写一段 python 程序，计算 `1 + 2 + 3 + ... + 1,000,000` 输出计算所需时间。
+
+**Solution** 代码见 [hw1_1_calculate_time.py](hw1_1_calculate_time.py)
+
 ## Question 2
+
 将下列函数按增长速度进行排序，并指出增长速度相同的函数：
 
 $N$ ， $N^{\frac{1}{2}}$ ， $N^{1.5}$ ， $N^2$ ， $N\log N$ ， $N\log (\log N)$ ， $N(\log N)^2$ ， $N\log N^2$ ， $2^N$ ， $2^{N/2}$ ， $37$ ， $N^2 \log N$ ， $N^3$
@@ -121,6 +128,33 @@ if __name__ == '__main__':
 ![hw1_3](./hw1_3.png)
 
 
+## Question 4
+
+**汉诺塔问题** 一个古老的印度神庙里有 3 根柱，其中一个自上而下放置了由小到大的 64 个金盘。僧侣们依照以下规则把 64 个金盘移动到另一个柱子上：
+- 一次只能移动一个金盘；
+- 金盘只能在柱子上存放；
+- 小盘必须始终放置在大盘上方；
+
+请设计并用 Python 实现算法，接收用户输入的金盘数目 N 输出将金盘从柱子 0 移动到柱子 2 的全过程。
+输出格式为：`move(a, x, y)`，其中 a 为盘子编号（1 ~ N），x 和 y 为柱子编号（0 ~ 2），表示将盘子 a 从柱子 x 移动到柱子 y。
+
+**Solution** 代码见 [hw1_4_hanoi.py](hw1_4_hanoi.py)
+
+## Question 5
+
+请编写一个 python 函数，将两个有序的单向链表合并为一个有序链表，合并后使原链表为空。
+链表的节点结构参考课件中的单向链表节点，且链表带有哨兵节点作为头节点。
+有序链表中元素为从小到大排列。
+
+**Solution** 代码见 [hw1_5_merge_linked_list.py](hw1_5_merge_linked_list.py)
+
+## Question 6
+
+**快慢指针** 假设一个单链表类使用的节点与课件中的节点相同，但并未记录链表中节点的数目。
+请为该类添加一个方法，该方法用于高效找到链表的中间节点。
+若链表长度为偶数，则返回两个中间节点中靠后的那一个。
+
+**Solution** 代码见 [hw1_6_fast_slow_point.py](hw1_6_fast_slow_point.py)
 
 ## Question 7
 
@@ -135,3 +169,11 @@ if __name__ == '__main__':
 ['Y', 'Z', 'X']
 ['Z', 'Y', 'X']
 ```
+
+代码见 [hw1_7_stack_backtracking.py](hw1_7_stack_backtracking.py)
+
+## Question 8
+
+**N 皇后问题** 在 NxN 格的国际象棋上摆放 N 个皇后，使其不能互相攻击，即任意两个皇后都不能处于同一行、同一列或同一斜线上，问有多少种摆法？
+
+**Solution** 代码见 [hw1_8_nqueens.py](hw1_8_nqueens.py)
