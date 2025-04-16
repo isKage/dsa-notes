@@ -13,7 +13,7 @@
 
 Tags: `Data Structure` `Algorithms` `Python`
 
-本仓库**[更新中]**笔记与代码根据书本 [《数据结构与算法 Python 语言实现》](https://book.douban.com/subject/30323938/) 整理。更多内容可以前往我的知乎专栏 [isKage 数据结构与算法](https://zhuanlan.zhihu.com/column/c_1876599117028925442) 或者我的个人博客 [isKage 数据结构与算法](https://blog.iskage.online/categories/数据结构与算法/) 。本仓库笔记包括的是通用、常见的数据结构与算法。编程语言并不重要，为简单实现采用的是 `Python` 语言，读者可根据自己的偏好自主实现。
+本仓库 **[持续更新中]** 笔记与代码根据书本 [《数据结构与算法 Python 语言实现》](https://book.douban.com/subject/30323938/) 整理。我的知乎专栏 [isKage 数据结构与算法](https://zhuanlan.zhihu.com/column/c_1876599117028925442) ；我的个人博客 [isKage 数据结构与算法](https://blog.iskage.online/categories/数据结构与算法/) 。本仓库笔记包括的是通用、常见的数据结构与算法。编程语言并不重要，为简单实现采用的是 `Python` 语言，读者可根据自己的偏好自主实现。
 
 ## 目录
 
@@ -44,13 +44,19 @@ Tags: `Data Structure` `Algorithms` `Python`
 8. 优先级队列和堆
     - 笔记见 [优先级队列 堆 堆排序](./lec8_priority_queue_heap/note08_优先级队列和堆.md)
     - 所有相关材料均在文件夹 [lec8](./lec8_priority_queue_heap)
+9. 映射、哈希表、跳跃表
+    - 第一部分笔记见 [无序映射 哈希函数 哈希表](./lec9_map_hash/note09_映射与哈希.md)
+    - 第二部分笔记见 [有序映射 跳跃表](./lec9_map_hash/note09_有序映射.md)
+    - 所有相关材料均在文件夹 [lec9](./lec9_map_hash)
 
 ## 习题
 
 习题文件夹为 [Assignments](./Assignments)
 
-1. 第一次习题：有关 `introduction`, `alorithm`, `recursion`, `array`, `linked list` and `stack` 见 [HW1](./Assignments/HW1/hw1.md)
-2. 第二次习题：有关 `linked list` `tree` `binary tree` `priority queue` `heap` and `heap sort` 见 [HW2](./Assignments/HW2/hw2.md)
+1. 第一次习题：有关 `introduction`, `alorithm`, `recursion`, `array`, `linked list` and `stack`
+   见 [HW1](./Assignments/HW1/hw1.md)
+2. 第二次习题：有关 `linked list` `tree` `binary tree` `priority queue` `heap` and `heap sort`
+   见 [HW2](./Assignments/HW2/hw2.md)
 
 ## LeetCode 算法题
 
