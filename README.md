@@ -48,6 +48,10 @@ Tags: `Data Structure` `Algorithms` `Python`
     - 第一部分笔记见 [无序映射 哈希函数 哈希表](./lec9_map_hash/note09_映射与哈希.md)
     - 第二部分笔记见 [有序映射 跳跃表](./lec9_map_hash/note09_有序映射.md)
     - 所有相关材料均在文件夹 [lec9](./lec9_map_hash)
+10. 搜索树实现有序映射
+    - 第一部分笔记见 [搜索树：二叉搜索树、平衡搜索树、AVL 树](./lec10_search_tree/note10_搜索树1.md) 
+    - 第二部分笔记见 [搜索树：伸展树、红黑树](./lec10_search_tree/note10_搜索树2.md)
+    - 所有相关材料均在文件夹 [lec10](./lec10_search_tree)
 
 ## 习题
 
