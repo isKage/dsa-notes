@@ -1,0 +1,13 @@
+End!
+--- a reversed file
+And that is the result
+one by one.
+pop the objects (lines)
+After that,
+and push every lines into the stack.
+we read this file
+By using stack data structure,
+Body:
+Objective: for reverse
+Create time: 2025/3/13
+File name: example.txt
