@@ -52,6 +52,10 @@ Tags: `Data Structure` `Algorithms` `Python`
     - 第一部分笔记见 [搜索树：二叉搜索树、平衡搜索树、AVL 树](./lec10_search_tree/note10_搜索树1.md) 
     - 第二部分笔记见 [搜索树：伸展树、红黑树](./lec10_search_tree/note10_搜索树2.md)
     - 所有相关材料均在文件夹 [lec10](./lec10_search_tree)
+11. 排序与选择
+    - 笔记见 [排序与选择](./lec11_sort_select/note11_排序与选择.md)
+    - 所有相关材料均在文件夹 [lec11](./lec11_sort_select)
+
 
 ## 习题
 
