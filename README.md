@@ -55,6 +55,10 @@ Tags: `Data Structure` `Algorithms` `Python`
 11. 排序与选择
     - 笔记见 [排序与选择](./lec11_sort_select/note11_排序与选择.md)
     - 所有相关材料均在文件夹 [lec11](./lec11_sort_select)
+12. 图与图算法
+    - 第一部分笔记见 [图算法：图与图的遍历算法](./lec12_graph/note12_图算法1.md)
+    - 第二部分笔记见 ...
+    - 所有相关材料均在文件夹 [lec12](./lec12_graph)
 
 ## 习题
 
