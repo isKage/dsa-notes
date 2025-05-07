@@ -180,7 +180,7 @@ class ProbeHashMap(HashMapBase):
     #         elif k == self._table[j]._key:  # 找到匹配的 k -> True
     #             return (True, j)  # 并且返回此处的索引
     #
-    #         j = (j + i * i) % len(self._table)  # 向后探索，二次探测 i^2 的步长
+    #         j = (j + 2 * i - 1) % len(self._table)  # 向后探索，二次探测 i^2 - (i - 1)^2 = 2 * i - 1 的步长
     #         i += 1
     # ====================================================================================
 
@@ -230,7 +230,6 @@ class ProbeHashMap(HashMapBase):
     def _find_slot(self, j, k):
         """双重哈希：在桶/索引 j 中搜寻含义键 k 的元组"""
         firstAvail = None
-        i = 1  # 步长
 
         while True:
             if self._is_available(j):  # 如果可以插入: _table[j] 是 None 或 _AVAIL
@@ -242,8 +241,7 @@ class ProbeHashMap(HashMapBase):
             elif k == self._table[j]._key:  # 找到匹配的 k -> True
                 return (True, j)  # 并且返回此处的索引
 
-            j = (j + i * self._double_hash(k)) % len(self._table)  # 向后探索，再哈希
-            i += 1
+            j = (j + self._double_hash(k)) % len(self._table)  # 向后探索，再哈希
     # ====================================================================================
 
 
