@@ -808,3 +808,65 @@ if __name__ == '__main__':
 # sort not descend: [2, 3, 4, 5, 7, 8]
 # sort descend: [8, 7, 5, 4, 3, 2]
 ```
+## 补充：定位器
+
+为了能通过 O(1) 时间就找到指定的节点，并进行更新或删除，可以加入定位器，Python 实现 `AdaptableHeapPriorityQueue` 类如下：
+
+```python
+class AdaptableHeapPriorityQueue(HeapPriorityQueue):
+    """加入定位器, 使得可以在 O(1) 时间定位某个节点"""
+
+    # ---------------------- nested Locator class ----------------------
+    class Locator(HeapPriorityQueue._Item):
+        """定位器, 包装 _Item 加入位置索引"""
+        __slots__ = '_index'
+
+        def __init__(self, k, v, j):
+            super().__init__(k, v)
+            self._index = j  # 存入位置索引
+
+    # ---------------------- nonpublic behaviors ----------------------
+    def _swap(self, i, j):
+        """交换后, 更新位置"""
+        super()._swap(i, j)
+        self._data[i]._index = j
+        self._data[j]._index = i
+
+    def _bubble(self, j):
+        """综合的冒泡操作: 向上或向下"""
+        if j > 0 and self._data[j] < self._data[self._parent(j)]:
+            self._upheap(j)  # 向上
+        else:
+            self._downheap(j)  # 向下
+
+    def add(self, key, value):
+        """加入新元素"""
+        token = self.Locator(key, value, len(self._data))  # 加到最后, 即堆的最后一个点下
+        self._data.append(token)
+        self._upheap(len(self._data) - 1)  # 当前位置向上冒泡
+        return token
+
+    def update(self, loc, newkey, newval):
+        """更新某个位置的元素 O(1)"""
+        j = loc._index  # 获取在 self._data 的索引
+        if not (0 <= j < len(self) and self._data[j] is loc):
+            raise ValueError('Invalid locator')  # 不合法的位置类
+        # 更新
+        loc._key = newkey
+        loc._value = newkey
+        self._bubble(j)  # 冒泡
+
+    def remove(self, loc):
+        """移除某个位置的元素 O(1)"""
+        j = loc._index  # 获取在 self._data 的索引
+        if not (0 <= j < len(self) and self._data[j] is loc):
+            raise ValueError('Invalid locator')  # 不合法的位置类
+        # 删除
+        if j == len(self) - 1:  # 在尾部直接删除
+            self._data.pop()
+        else:
+            self._swap(j, len(self._data) - 1)  # 否则移到尾部
+            self._data.pop()  # 仍然删除尾部
+            self._bubble(j)  # 冒泡
+        return (loc._key, loc._value)
+```
