@@ -15,6 +15,8 @@ Tags: `Data Structure` `Algorithms` `Python`
 
 本仓库 **[持续更新中]** 笔记与代码根据书本 [《数据结构与算法 Python 语言实现》](https://book.douban.com/subject/30323938/) 整理。我的知乎专栏 [isKage 数据结构与算法](https://zhuanlan.zhihu.com/column/c_1876599117028925442) ；我的个人博客 [isKage 数据结构与算法](https://blog.iskage.online/categories/数据结构与算法/) 。本仓库笔记包括的是通用、常见的数据结构与算法。编程语言并不重要，为简单实现采用的是 `Python` 语言，读者可根据自己的偏好自主实现。
 
+基于本仓库的知识，综合使用各类基础数据结构与算法，实现了一个“商业决策平台的智能数据管理系统”的课程项目，[DSA-PJ](https://github.com/isKage/bidms-dsa-pj) 。
+
 ## 目录
 
 1. Python 基础：面向对象程序设计
@@ -57,7 +59,7 @@ Tags: `Data Structure` `Algorithms` `Python`
     - 所有相关材料均在文件夹 [lec11](./lec11_sort_select)
 12. 图与图算法
     - 第一部分笔记见 [图算法：图与图的遍历算法](./lec12_graph/note12_图算法1.md)
-    - 第二部分笔记见 ...
+    - 第二部分笔记见 [图算法：最短路径、传递闭包和最小生成树](./lec12_graph/note12_图算法2.md)
     - 所有相关材料均在文件夹 [lec12](./lec12_graph)
 
 ## 习题
@@ -70,6 +72,7 @@ Tags: `Data Structure` `Algorithms` `Python`
    见 [HW2](./Assignments/HW2/hw2.md)
 3. 第三次习题：有关 `map` `hash` `search tree` `AVL` `sort` `merge & quick sort` and `select`
    见 [HW3](./Assignments/HW3/hw3.md)
+4. 第四次习题：有关 `graph` `text` `dynamic programming` 见 [HW4](./Assignments/HW4/hw4.md)
 
 ## 友链
 

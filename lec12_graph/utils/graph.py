@@ -17,6 +17,9 @@ class Graph:
         def __hash__(self):  # hash 函数
             return hash(id(self))
 
+        def __repr__(self):
+            return f"Vertex(element={self._element})"
+
     # ------------------------- nested Edge class -------------------------
     class Edge:
         """边集合"""
@@ -43,6 +46,9 @@ class Graph:
         def __hash__(self):  # hash 函数
             """对边哈希, 方便后面二级结构 I(v) 以字典形式存储"""
             return hash((self._origin, self._destination))
+
+        def __repr__(self):
+            return f"Edge(origin={self._origin}, destination={self._destination}, element={self._element})"
 
     # ------------------------- Graph methods -------------------------
     def __init__(self, directed=False):
