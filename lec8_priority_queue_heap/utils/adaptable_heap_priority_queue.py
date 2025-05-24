@@ -140,12 +140,16 @@ class AdaptableHeapPriorityQueue(HeapPriorityQueue):
             super().__init__(k, v)
             self._index = j  # 存入位置索引
 
+    # ---------------------- re-write initial ----------------------
+    def __init__(self, contents=()):
+        super().__init__(contents)
+
     # ---------------------- nonpublic behaviors ----------------------
     def _swap(self, i, j):
         """交换后, 更新位置"""
         super()._swap(i, j)
-        self._data[i]._index = j
-        self._data[j]._index = i
+        self._data[i]._index = i
+        self._data[j]._index = j
 
     def _bubble(self, j):
         """综合的冒泡操作: 向上或向下"""
@@ -168,7 +172,7 @@ class AdaptableHeapPriorityQueue(HeapPriorityQueue):
             raise ValueError('Invalid locator')  # 不合法的位置类
         # 更新
         loc._key = newkey
-        loc._value = newkey
+        loc._value = newval
         self._bubble(j)  # 冒泡
 
     def remove(self, loc):
@@ -187,8 +191,8 @@ class AdaptableHeapPriorityQueue(HeapPriorityQueue):
 
 
 if __name__ == '__main__':
-    hpq = HeapPriorityQueue()
     print("=" * 15, "Heap Priority Queue by Array", "=" * 15)
+    hpq = HeapPriorityQueue()
     hpq.add(1, 'small')
     hpq.add(3, 'median')
     hpq.add(5, 'large')
@@ -199,6 +203,17 @@ if __name__ == '__main__':
     print("=" * 15, "Heap Priority Queue by Array", "=" * 15)
     l = [(1, 'small'), (2, 'median'), (3, 'large')]
     hpq = HeapPriorityQueue(l)
+    print("The min is:", hpq.min())
+    print("Delete the min:", hpq.remove_min())
+    print("Now, the min is:", hpq.min())
+
+    print("=" * 15, "Locator: Heap Priority Queue", "=" * 15)
+    hpq = AdaptableHeapPriorityQueue()
+
+    hpq.add(1, 'small')
+    hpq.add(3, 'median')
+    hpq.add(5, 'large')
+
     print("The min is:", hpq.min())
     print("Delete the min:", hpq.remove_min())
     print("Now, the min is:", hpq.min())
