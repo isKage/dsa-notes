@@ -61,17 +61,18 @@ Tags: `Data Structure` `Algorithms` `Python`
     - 第一部分笔记见 [图算法：图与图的遍历算法](./lec12_graph/note12_图算法1.md)
     - 第二部分笔记见 [图算法：最短路径、传递闭包和最小生成树](./lec12_graph/note12_图算法2.md)
     - 所有相关材料均在文件夹 [lec12](./lec12_graph)
+13. 文本处理
+    - 第一部分笔记见 [文本处理：模式匹配 KMP 与文本压缩 Huffman 编码](./lec13_text/note13_text1.md)
+    - 第二部分笔记见 文本处理：字典树 待更新
+    - 所有相关材料均在文件夹 [lec13](./lec13_text)
 
 ## 习题
 
 习题文件夹为 [Assignments](./Assignments)
 
-1. 第一次习题：有关 `introduction`, `alorithm`, `recursion`, `array`, `linked list` and `stack`
-   见 [HW1](./Assignments/HW1/hw1.md)
-2. 第二次习题：有关 `linked list` `tree` `binary tree` `priority queue` `heap` and `heap sort`
-   见 [HW2](./Assignments/HW2/hw2.md)
-3. 第三次习题：有关 `map` `hash` `search tree` `AVL` `sort` `merge & quick sort` and `select`
-   见 [HW3](./Assignments/HW3/hw3.md)
+1. 第一次习题：有关 `introduction`, `alorithm`, `recursion`, `array`, `linked list` and `stack` 见 [HW1](./Assignments/HW1/hw1.md)
+2. 第二次习题：有关 `linked list` `tree` `binary tree` `priority queue` `heap` and `heap sort` 见 [HW2](./Assignments/HW2/hw2.md)
+3. 第三次习题：有关 `map` `hash` `search tree` `AVL` `sort` `merge & quick sort` and `select` 见 [HW3](./Assignments/HW3/hw3.md)
 4. 第四次习题：有关 `graph` `text` `dynamic programming` 见 [HW4](./Assignments/HW4/hw4.md)
 
 ## 友链
