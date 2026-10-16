@@ -9,11 +9,12 @@
 
 # 数据结构与算法
 
-> Data Structure and Algorithms
+> Thanks to [Prof. Zibo Liu](https://www.fdsm.fudan.edu.cn/AboutUs/preview.html?uid=012559)'s lecture: *Introduction of Data Structure and Algorithms* (School of Management, Fudan University).
 
 Tags: `Data Structure` `Algorithms` `Python`
 
-本仓库 **[持续更新中]** 笔记与代码根据书本 [《数据结构与算法 Python 语言实现》](https://book.douban.com/subject/30323938/) 整理。我的知乎专栏 [isKage 数据结构与算法](https://zhuanlan.zhihu.com/column/c_1876599117028925442) ；我的个人博客 [isKage 数据结构与算法](https://blog.iskage.online/categories/数据结构与算法/) 。本仓库笔记包括的是通用、常见的数据结构与算法。编程语言并不重要，为简单实现采用的是 `Python` 语言，读者可根据自己的偏好自主实现。
+
+本仓库 **[已完结]** 笔记与代码根据书本 [《数据结构与算法 Python 语言实现》](https://book.douban.com/subject/30323938/) 整理。我的知乎专栏 [isKage 数据结构与算法](https://zhuanlan.zhihu.com/column/c_1876599117028925442) ；我的个人博客 [isKage 数据结构与算法](https://blog.iskage.online/categories/数据结构与算法/) 。本仓库笔记包括的是通用、常见的数据结构与算法。编程语言并不重要，为简单实现采用的是 `Python` 语言，读者可根据自己的偏好自主实现。
 
 基于本仓库的知识，综合使用各类基础数据结构与算法，实现了一个“商业决策平台的智能数据管理系统”的课程项目，[DSA-PJ](https://github.com/isKage/bidms-dsa-pj) 。
 
@@ -63,7 +64,6 @@ Tags: `Data Structure` `Algorithms` `Python`
     - 所有相关材料均在文件夹 [lec12](./lec12_graph)
 13. 文本处理
     - 第一部分笔记见 [文本处理：模式匹配 KMP 与文本压缩 Huffman 编码](./lec13_text/note13_text1.md)
-    - 第二部分笔记见 文本处理：字典树 待更新
     - 所有相关材料均在文件夹 [lec13](./lec13_text)
 
 ## 习题
